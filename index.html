@@ -11,60 +11,99 @@
 </head>
 <body>
   <!-- * header -->
-  <header class="header">
-    <nav class="container-nav">
-      <strong><span class="color-pink">&#60;</span> Chars <span class="color-pink">&#47;&#62;</span></strong>
-    </nav>
-    <section class="container-section-header">
-      <div class="container-header-info">
-        <h1 class="header-info-title">Hello, my name is <span class="tag-name"><span class="color-pink">&#60;</span> Carlos Sánchez <span class="color-pink">&#47;&#62;</span></span></h1>
-        <p class="header-info-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis odit id doloremque officiis a magnam! Tempore optio accusamus sapiente, reiciendis est exercitationem ducimus quas cupiditate quos vitae dolor, fuga ea.</p>
-      </div>    
-      <div class="container-header-img">
-        <img width="250px" src="./assets/undraw_version_control_re_mg66.svg" alt="">
-      </div>
-    </section>    
+  <header class="header" id="home">
+    <div class="container-header">
+      <nav class="container-nav">
+        <strong><span class="color-pink">&#60;</span> Chars <span class="color-pink">&#47;&#62;</span></strong>
+        <ul class="container-nav-list">
+          <li class="nav-list-item">
+            <a href="#home" class="list-item-link">Home</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="#about" class="list-item-link">About Me</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="#projects" class="list-item-link">Projects</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="#contact" class="list-item-link">Contact</a>
+          </li>
+        </ul>
+        <!-- * menu hamburguesa -->
+        <div class="container-btn-burguer">
+          <i class="fa-solid fa-burger"></i>
+        </div>
+      </nav>
+      <section class="container-section-header">
+        <div class="container-header-info">
+          <h1 class="header-info-title">Hello, my name is <span class="tag-name"><span class="color-pink">&#60;</span> Carlos Sánchez <span class="color-pink">&#47;&#62;</span></span></h1>
+          <p class="header-info-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis odit id doloremque officiis a magnam! Tempore optio accusamus sapiente, reiciendis est exercitationem ducimus quas cupiditate quos vitae dolor, fuga ea.</p>
+          <div class="container-networks">
+            <ul class="container-networks-list">
+              <li class="network-list-item">
+                <a href="https://github.com/charsdvp" class="network-item-link" target="_blank">
+                  <i class="fa-brands fa-github fa-xl"></i>
+                </a>
+              </li>
+              <li class="network-list-item">
+                <a href="https://github.com/charsdvp" class="network-item-link" target="_blank">
+                  <i class="fa-brands fa-facebook fa-xl"></i>
+                </a>
+              </li>
+              <li class="network-list-item">
+                <a href="https://github.com/charsdvp" class="network-item-link" target="_blank">
+                  <i class="fa-brands fa-twitter fa-xl"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>    
+        <div class="container-header-img">
+          <img width="250px" src="./assets/developer_blue.svg" alt="">
+        </div>
+      </section>    
+    </div>
   </header>
   <!-- * Main -->
   <main class="main">
     <!-- * About -->
-    <section class="container-section-about">
+    <section class="container-section-about" id="about">
       <div class="container-about">
         <div class="container-about-info">
           <h2>About Me</h2>
-          <img width="200px" src="./assets/undraw_developer_activity_re_39tg.svg" alt="Imagen sobre un personaje trabajando en su computadora" class="about-info-img">
+          <img width="200px" src="./assets/coffee_blue.svg" alt="Imagen sobre un personaje trabajando en su computadora" class="about-info-img">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus excepturi dolor consectetur suscipit obcaecati provident. Consequatur magnam veritatis ratione, eos exercitationem culpa, recusandae placeat repellendus repellat sit facilis maxime.</p>
         </div>        
         <div class="container-about-skills">
           <div class="container-about-skill">
-            <i class="fa-solid fa-chess-knight fa-xl"></i>
-            <strong class="about-skill-name">Chess</strong>
+            <i class="fa-brands fa-html5 fa-2xl"></i>
+            <strong class="about-skill-name">HTML</strong>
           </div>
           <div class="container-about-skill">
-            <i class="fa-solid fa-chess-knight fa-xl"></i>
-            <strong class="about-skill-name">Chess</strong>
+            <i class="fa-brands fa-css3-alt fa-2xl"></i>
+            <strong class="about-skill-name">CSS</strong>
           </div>
           <div class="container-about-skill">
-            <i class="fa-solid fa-chess-knight fa-xl"></i>
-            <strong class="about-skill-name">Chess</strong>
+            <i class="fa-brands fa-square-js fa-2xl"></i>
+            <strong class="about-skill-name">JavaScript</strong>
           </div>
           <div class="container-about-skill">
-            <i class="fa-solid fa-chess-knight fa-xl"></i>
-            <strong class="about-skill-name">Chess</strong>
+            <i class="fa-brands fa-node-js fa-2xl"></i>
+            <strong class="about-skill-name">NodeJs</strong>
           </div>
           <div class="container-about-skill">
-            <i class="fa-solid fa-chess-knight fa-xl"></i>
-            <strong class="about-skill-name">Chess</strong>
+            <i class="fa-brands fa-bootstrap fa-2xl"></i>
+            <strong class="about-skill-name">Bootstrap</strong>
           </div>
           <div class="container-about-skill">
-            <i class="fa-solid fa-chess-knight fa-xl"></i>
-            <strong class="about-skill-name">Chess</strong>
+            <i class="fa-brands fa-git-alt fa-2xl"></i>
+            <strong class="about-skill-name">Git</strong>
           </div>
         </div>
       </div>
     </section>
     <!-- * Proyects -->
-    <section class="container-section-projects">
+    <section class="container-section-projects" id="projects">
       <h2>Projects</h2>
       <div class="container-projects">
         <div class="container-card-project">
@@ -86,19 +125,18 @@
           </div>
         </div>
         <div class="container-card-project">          
-          <img width="260px" src="./assets/charsdvp.github.io_chroma-code_.png" alt="" class="card-project-img"> 
+          <img width="260px" src="./assets/citaApa.png" alt="" class="card-project-img"> 
           <strong class="card-project-name">Citas APA</strong>
-          <p>Es un generador de paletas de colores para tus diversos proyectos.</p>
+          <p>Es una herramienta en línea para generar citas en formato APA de forma rápida y sencilla.</p>
           <div class="container-projects-links">
             <a href="https://github.com/charsdvp/Formato_APA" target="_blank" class="project-link">Github</a>
             <a href="https://charsdvp.github.io/Formato_APA/" target="_blank" class="project-link">Demo</a>
           </div>
         </div>
       </div>
-    </section>
-    <!-- * Technology -->
+    </section>    
     <!-- * Contact -->
-    <section class="container-section-contact">
+    <section class="container-section-contact" id="contact">
       <h2>Contact</h2>
       <div class="container-form">
         <div class="container-form-contact">
@@ -112,7 +150,7 @@
             <button type="submit" class="btn-send">Enviar</button>
           </form>
         </div>
-        <img src="./assets/undraw_mobile_inbox_re_ciwq.svg" alt="" loading="lazy">
+        <img src="./assets/cash_blue.svg" alt="" loading="lazy">
       </div>
     </section>
     <!-- * footer -->

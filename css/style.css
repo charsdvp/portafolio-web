@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+:root{
+  --color-blue: #13abec;
+}
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 /* * * * * * * * * * * Estilos generales * * * * * * * * * * * * * * * */
 body{
@@ -11,11 +15,11 @@ body{
   font-family: 'Quicksand', sans-serif;
 }
 .color-pink{
-  color: #ec138e;
+  color: var(--color-blue);
 }
 ::selection{
   color: aliceblue;
-  background-color: #ec138e;
+  background-color: var(--color-blue);
 }
 ::-webkit-scrollbar{
   width: 8px;
@@ -34,12 +38,43 @@ body{
   width: 100%;
   min-height: 100vh;
 }
+.container-header{
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
 .container-nav{
-  margin: 0 auto;
-  width: 80%;
+  position: fixed;
+  padding: 0 65px;
+  width: 100%;
   height: 80px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  z-index: 8;
+  transition: background-color .6s ease;
+  background-color: #111;
+}
+.container-nav-list{
+  display: flex;
+  background-color: none;
+  gap: 35px;
+  transition: .3s ease;
+}
+.nav-list-item{
+  list-style: none;
+}
+.list-item-link{
+  padding: 8px 10px;
+  display: block;
+  font-weight: bold;
+  text-decoration: none;
+  color: aliceblue;
+  border-radius: 6px;
+  transition: .2s all ease-in-out;
+}
+.list-item-link:hover, .list-item-link:active{
+  color: var(--color-blue);
 }
 .header-info-title{  
   display: block;
@@ -47,9 +82,52 @@ body{
   margin-bottom: 15px;
   font-size: 2rem;
 }
+.container-btn-burguer{
+  cursor: pointer;
+  display: none;
+}
+@media screen and (max-width: 650px){
+  .container-btn-burguer{
+    display: block;
+    position: fixed;
+    z-index: 9;
+    right: 45px;
+  } 
+  .container-nav-list{
+    display: flex;
+    padding: 65px 0 0 0;    
+    flex-direction: column;
+    position: fixed;
+    width: 250px;
+    height: 100vh;
+    top: 0;    
+    right: 0;
+    bottom: 0;
+    background-color: #222;
+    gap: 0;
+    z-index: 8;
+    transform: translate(100%, 0);
+    transition: transform .3s all ease;
+  }
+  .nav-list-item{
+    width: 100%;
+  }
+  .list-item-link{
+    padding: 15px 0 15px 25px;
+    border-radius: 0px;
+  }  
+  .list-item-link:hover, .list-item-link:active{
+    color: aliceblue;
+    background-color: #333;
+  }  
+}
+.container-nav-list.isActive{  
+  transform: translate(0, 0);
+}
 /* * * * * * * * * * * * * * container section header * * * * * * * * */
 .container-section-header{
   margin: 0 auto;
+  padding: 65px 0 0 0;
   width: 80%;
   min-height: 500px;
   display: flex;
@@ -62,13 +140,39 @@ body{
 .tag-name{
   display: inline-block;
 }
+.container-networks{
+  max-width: 100px;
+}
+.container-networks-list{
+  padding: 10px 0;
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  max-width: 320px;
+}
+.network-list-item{
+  list-style: none;
+}
+.network-item-link{
+  color: #999;
+}
+.network-item-link:hover{
+  color: var(--color-blue);
+}
 @media screen and (max-width: 800px){
   .container-section-header{
+    padding-top: 100px;
     flex-direction: column;
     text-align: center;    
   }
   .header-info-description{
     margin: 0 auto;
+  }
+  .container-networks{
+    margin: 0 auto;    
+  }
+  .container-networks-list{
+    padding: 30px 0;
   }
 }
 /* * * * * * * * * * * * * * * * * * * container section about * * * * * * * * * * * */
@@ -125,12 +229,7 @@ body{
   border-radius: 6px;
   border: 1px solid #333;
 }
-/* .container-about-skill:nth-child( odd ){
-  border: 1px solid #ec138e;
-}
-.container-about-skill:nth-child( even ){
-  border: 1px solid #4913ec;
-} */
+
 @media screen and (max-width:1000px){
   .container-about{
     flex-direction: column;
@@ -142,10 +241,13 @@ body{
 }
 /* * * * * * * * * * * * * * * * * * * * * container section projects * * * * * * * * * * * */
 .container-section-projects{
+  padding-bottom: 35px;
   margin: 45px auto;
   width: 80%;
   min-height: 100vh;
   text-align: center;
+  border-bottom: 1px solid #9999;
+
 }
 .container-projects{
   margin-top: 45px;
@@ -169,11 +271,13 @@ body{
   border-radius: 6px;
   gap: 18px;
   transition: .6s all ease;
+  z-index: 3;
 }
 .container-card-project:hover{
   cursor: pointer;
   border: 1px solid #666666;
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
+  z-index: 3;
 }
 .card-project-img{
   border-radius: 6px;
@@ -250,15 +354,15 @@ p{
   padding: 8px 15px;
   width: 100px;
   font-weight: bold;
-  border: 1px solid #ec138e;
+  border: 1px solid #158cb0;
   border-radius: 24px;
   color: aliceblue;
-  background: #ec138e;
+  background-color: #158cb0;
   cursor: pointer;
 }
 .btn-send:hover, .btn-send:active{
-  background-color: #ca0e79;
-  border: 1px solid #ca0e79;
+  border: 1px solid var(--color-blue);
+  background: var(--color-blue);
 }
 @media screen and (max-width:700px){
   
