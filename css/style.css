@@ -13,6 +13,7 @@ body{
   color: aliceblue;
   background-color: #111;
   font-family: 'Quicksand', sans-serif;
+  text-align: center;
 }
 .color-blue{
   color: var(--color-blue);
@@ -87,6 +88,9 @@ body{
   display: none;
 }
 @media screen and (max-width: 650px){
+  .container-nav{
+    padding: 0 25px;
+  }
   .container-btn-burguer{
     display: block;
     position: fixed;
@@ -127,19 +131,19 @@ body{
 /* * * * * * * * * * * * * * container section header * * * * * * * * */
 .container-section-header{
   margin: 0 auto;
-  padding: 65px 0 0 0;
   width: 80%;
-  min-height: 500px;
+  min-height: 600px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 .container-header-info{  
+  text-align: left;
   max-width: 600px;
 }
 .tag-name{
   display: block;
-  font-size: 2.5rem;
+  font-size: 1.5em;
 }
 .container-networks{
   max-width: 100px;
@@ -163,7 +167,6 @@ body{
 /* animacion emoji */
 .container-emoji {
   width: 100%;
-  text-align: center;
   animation: bounce 2s infinite; /* Aumenté la duración de la animación a 2 segundos para que sea más visible */
 }
 .header-img{
@@ -177,11 +180,15 @@ body{
     transform: translateY(-20px); /* En el 50% de la animación, el emoji sube 20px */
   }
 }
-@media screen and (max-width: 800px){
+@media screen and (max-width: 810px){
   .container-section-header{
-    padding-top: 100px;
-    flex-direction: column;
-    text-align: center;    
+    padding-top: 80px;
+    flex-direction: column;    
+    justify-content: start;
+    min-height: 500px;
+  }
+  .container-header-info{
+    text-align: center;
   }
   .header-info-description{
     margin: 0 auto;
@@ -196,13 +203,15 @@ body{
     margin: 55px 0;
   }
   .header-info-title{
-    font-size: 1.7rem;
-  }
-  .tag-name{
-    font-size: 1.7rem;
-  }
+    font-size: 1.3em;
+  }  
+}
   .header-img{
     width: 200px;
+  }
+@media screen and (max-width: 510px){  
+  .header-info-title{
+    font-size: 1em;
   }
 }
 /* * * * * * * * * * * * * * * * * * * container section about * * * * * * * * * * * */
@@ -212,8 +221,7 @@ body{
   min-height: 120vh;  
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  justify-content: center;  
   background-color: #222;
   clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
 }
@@ -230,6 +238,9 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.about-info-description{
+  text-align: justify;
 }
 .container-about-info > h2{
   margin-bottom: 35px;
@@ -264,17 +275,16 @@ body{
     flex-direction: column;
   }
   .container-section-about{
-    padding: 45px 0;
+    padding: 100px 0;
     clip-path: none;
   }
 }
 /* * * * * * * * * * * * * * * * * * * * * container section projects * * * * * * * * * * * */
 .container-section-projects{
-  padding-bottom: 35px;
-  margin: 45px auto;
+  margin: 0 auto;
+  padding: 35px 0 35px 0;
   width: 80%;
   min-height: 100vh;
-  text-align: center;
   border-bottom: 1px solid #9999;
 
 }
@@ -311,31 +321,34 @@ body{
 .card-project-img{
   border-radius: 6px;
 }
-p{
+.container-card-project > p {
+  max-width: 240px;
+}
+.header-info-description{
   font-size: .9rem;
   font-weight: bold;
   line-height: 25px;
-  text-align: justify;
   width: 80%;
 }
 .project-link{  
   margin: 0 15px;
-  color: #666;
   transition: .3s all ease-in;
+  color: #999;
 }
 .project-link:hover, .project-link:active{
   color: #13abec;
 }
 /* * * * * * * * * * * * * * * * * * * container section contact * * * * * * * */
-.container-section-contact{
+.container-section-contact{  
   margin: 0 auto;
+  padding: 35px 0 35px 0;
   width: 80%;
-  min-height: 100vh;
-  text-align: center;  
+  min-height: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  gap: 55px;
 }
 .container-form{
   margin: 0 auto;
@@ -399,8 +412,10 @@ outline: 1px solid #13abec;
   border: 1px solid var(--color-blue);
   background: var(--color-blue);
 }
-@media screen and (max-width:700px){
-  
+@media screen and (max-width:700px){  
+  .container-section-contact{
+    gap: 0;
+  }
   .container-form{
     flex-direction: column-reverse;
     gap: 35px;
