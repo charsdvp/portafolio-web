@@ -342,19 +342,20 @@ body{
 .container-section-contact{  
   margin: 0 auto;
   padding: 35px 0 35px 0;
-  width: 80%;
+  width: 100%;
   min-height: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   gap: 55px;
+  position: relative;
 }
 .container-form{
   margin: 0 auto;
   width: 80%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .container-form-contact{  
   padding: 10px 0;
@@ -371,7 +372,7 @@ body{
   flex-direction: column;
   gap: 15px;
 }
-.form-contact > input, .form-contact > textarea{
+.form-contact > div > input{
   padding: 10px;
   width: 250px;
   background: none;
@@ -380,18 +381,18 @@ body{
   color: aliceblue;
   display: block;
 }
-.form-contact > input:focus, .form-contact > textarea:focus{
+.form-contact > div > input:focus{
 outline: 1px solid #13abec;
 }
-#message{
-  resize: none;
-}
-.container-form-contact > label{
+ /* #message{
+  height: 100px;
+}  */
+div > label{
   display: block;
   text-align: left;
   margin-bottom: 10px;  
 }
-.container-form-contact > input{
+div > input{
   height: 30px;
 }
 .container-form > img{
@@ -429,7 +430,53 @@ outline: 1px solid #13abec;
     min-width: 340px;
   }
 }
+/********************* modal *********************/
+.modal{
+  width: 100%;
+  height: inherit;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.77);
+  position: absolute;
+  display: grid;
+  place-items: center;
+  z-index: 7;  
+  visibility: hidden;
+  transition: opacity 1s ease-in-out;
+}
+.modal-view{
+  visibility: visible;
+}
+@keyframes flashing {
+  0% {
+    border-color: transparent; /* Cambiamos el color del borde en el inicio */
+  } 
+  50% {
+    border-color: var(--color-blue); /* Cambiamos el color del borde a la mitad de la animación */
+  }
+  100% {
+    border-color: transparent; /* Cambiamos el color del borde al final */
+  }
+}
 
+.container-modal {
+  width: 200px;
+  height: 200px;
+  background-color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;  
+  border-radius: 8px;
+  border: 1px solid transparent; /* Asegúrate de establecer un borde inicial transparente */
+  animation: flashing 2s linear infinite; /* Aplicamos la animación */
+}
+.container-icon, .container-icon-mark{    
+  color: var(--color-blue);
+}
 /* * * * * * * * * * * * * * * * * * * * * * footer * * * * * * * * * * * * * */
 .container-footer{
   width: 100%;
@@ -441,7 +488,7 @@ outline: 1px solid #13abec;
   gap: 15px;
 }
 .email::after{
-  content: 'carlossanchez@logicbots.com.mx';
+  content: 'carlossanchezdvp@gmail.com';
 }
 @media screen and (max-width: 400px){
   .container-footer{    

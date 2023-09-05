@@ -7,6 +7,8 @@
   <link rel="shortcut icon" href="./assets/robot.png" type="image/x-icon">
   <!-- * link css -->
   <link rel="stylesheet" href="./css/style.css">
+  <!-- * emailJs -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <title>Chars | Portafolio Web</title>
 </head>
 <body>
@@ -110,7 +112,7 @@
       <h2>Projects</h2>
       <div class="container-projects">
         <div class="container-card-project">
-          <img width="260px" src="./assets/charsdvp.github.io_chroma-code_.png" alt="" class="card-project-img"> 
+          <img width="260px" src="./assets/chromaCode.png" alt="" class="card-project-img"> 
           <strong class="card-project-name">ChromaCode</strong>
           <p>It is a color palette generator for your various projects.</p>
           <div class="container-projects-links">
@@ -143,7 +145,7 @@
       <h2>Contact</h2>
       <div class="container-form">
         <div class="container-form-contact">
-          <form class="form-contact">
+          <!-- <form class="form-contact">
             <label for="name-user">Name :</label>
             <input type="text" name="name-user" id="name-user" autocomplete="off">
             <label for="email">E-Mail :</label>
@@ -151,9 +153,35 @@
             <label for="message">Message :</label>
             <textarea name="message" id="message" cols="10" rows="10" ></textarea>
             <button type="submit" class="btn-send">Enviar</button>
+          </form> -->
+          <form class="form-contact" id="form">
+            <div class="field">
+              <label for="from_name">Name :</label>
+              <input type="text" name="from_name" id="from_name" autocomplete="off">
+            </div>
+            <div class="field">
+              <label for="email_id">Email :</label>
+              <input type="text" name="email_id" id="email_id" autocomplete="off">
+            </div>            
+            <div class="field">
+              <label for="message">Message :</label>
+              <input type="text" name="message" id="message" autocomplete="off">
+            </div>
+            <input type="submit" id="button" value="Send" class="btn-send">
           </form>
         </div>
         <img src="./assets/cash_blue.svg" alt="" loading="lazy">
+      </div>
+      <div class="modal">
+        <div class="container-modal">
+          <h3 class="modal-text"></h3>
+          <div class="container-icon">
+            <i class="fa-regular fa-circle-check fa-2xl"></i>
+          </div>
+          <div class="container-icon-mark">
+            <i class="fa-regular fa-circle-xmark fa-2xl"></i>
+          </div>
+        </div>
       </div>
     </section>
     <!-- * footer -->
