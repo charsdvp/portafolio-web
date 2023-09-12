@@ -13,6 +13,6 @@ document.addEventListener('click', ( e ) => {
 document.getElementById('form')
   .addEventListener('submit', function(event) {
   event.preventDefault();
-  // agregamos el modal
+  // agregamos el modal y le pasamos el contexto
   sending.bind(this)();
 });

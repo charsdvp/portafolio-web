@@ -36,18 +36,22 @@ body{
 }
 /* * * * * * * * * * * Header * * * * * * * * * * * * * * * */
 .header{
-  width: 100%;
-  min-height: 100vh;
+  margin: 0 auto;
+  max-width: 2000px;
+  height: 700px;
 }
 .container-header{
-  width: 100%;
-  min-height: 100vh;
+  width: inherit;
+  height: inherit;
   position: relative;
 }
 .container-nav{
+  margin: 0 auto;
+  right: 0;
+  left: 0;
   position: fixed;
   padding: 0 65px;
-  width: 100%;
+  max-width: 2000px;
   height: 80px;
   display: flex;
   align-items: center;
@@ -161,8 +165,10 @@ body{
 .network-item-link{
   color: #999;
 }
-.network-item-link:hover{
-  color: var(--color-blue);
+.network-item-link:hover, .network-list-item:hover{
+  transition: transform .2s ease;
+  color: var(--color-blue); 
+  transform: scale(1.2); 
 }
 /* animacion emoji */
 .container-emoji {
@@ -217,8 +223,9 @@ body{
 /* * * * * * * * * * * * * * * * * * * container section about * * * * * * * * * * * */
 .container-section-about{
   margin: 0 auto;
-  width: 100%;
-  min-height: 120vh;  
+  padding: 100px 0;
+  max-width: 2000px;
+  min-height: 800px;
   display: flex;
   align-items: center;
   justify-content: center;  
@@ -268,8 +275,27 @@ body{
   gap: 15px;
   border-radius: 6px;
   border: 1px solid #333;
+  /* transition: border .2s ease;
+  cursor: pointer; */
 }
-
+/* .container-about-skill:nth-child(1):hover{
+  border: 1px solid orangered;
+}
+.container-about-skill:nth-child(2):hover{
+  border: 1px solid blue;
+}
+.container-about-skill:nth-child(3):hover{
+  border: 1px solid yellow;
+}
+.container-about-skill:nth-child(4):hover{
+  border: 1px solid green;
+}
+.container-about-skill:nth-child(5):hover{
+  border: 1px solid purple;
+}
+.container-about-skill:nth-child(6):hover{
+  border: 1px solid orangered;
+} */
 @media screen and (max-width:1000px){
   .container-about{
     flex-direction: column;
@@ -282,11 +308,10 @@ body{
 /* * * * * * * * * * * * * * * * * * * * * container section projects * * * * * * * * * * * */
 .container-section-projects{
   margin: 0 auto;
-  padding: 35px 0 35px 0;
+  padding: 100px 0 35px 0;
   width: 80%;
-  min-height: 100vh;
-  border-bottom: 1px solid #9999;
-
+  height: auto;
+  /* border-bottom: 1px solid #9999; */
 }
 .container-projects{
   margin-top: 45px;
@@ -314,7 +339,7 @@ body{
 }
 .container-card-project:hover{
   cursor: pointer;
-  border: 1px solid #666666;
+  border: 1px solid #666;
   /* transform: scale(1.1); */
   z-index: 3;
 }
@@ -332,18 +357,19 @@ body{
 }
 .project-link{  
   margin: 0 15px;
-  transition: .3s all ease-in;
+  transition: .3s all ease;
   color: #999;
+  text-decoration: none;
 }
 .project-link:hover, .project-link:active{
-  color: #13abec;
+  color: var(--color-blue);
 }
 /* * * * * * * * * * * * * * * * * * * container section contact * * * * * * * */
 .container-section-contact{  
   margin: 0 auto;
-  padding: 35px 0 35px 0;
-  width: 100%;
-  min-height: 600px;
+  padding:0 0 35px 0;
+  max-width: 2000px;  
+  min-height: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -359,6 +385,7 @@ body{
 }
 .container-form-contact{  
   padding: 10px 0;
+  min-height: 320px;
   max-width: 400px;
   text-align: left;  
   border-radius: 6px;
@@ -370,7 +397,7 @@ body{
   height: auto;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 25px;
 }
 .form-contact > div > input{
   padding: 10px;
