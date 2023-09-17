@@ -7,6 +7,12 @@
   <link rel="shortcut icon" href="./assets/robot.png" type="image/x-icon">
   <!-- * link css -->
   <link rel="stylesheet" href="./css/style.css">
+  <!-- *  opengraph -->
+  <meta property="og:title" content="Portfolio web">
+  <meta property="og:description" content="Step into my digital universe, where creativity knows no bounds. With a palette of code, design, and words, I craft immersive experiences. From elegant websites to poetic prose, my portfolio weaves stories and solutions that inspire and captivate. Join me on this journey of innovation and imagination, where pixels and paragraphs come to life.">
+  <meta property="og:image" content="https://cdn-icons-png.flaticon.com/128/1129/1129398.png">
+  <meta property="og:url" content="https://charsdvp.github.io/portafolio-web/">
+  <meta property="og:type" content="website">  
   <!-- * emailJs -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <title>Chars | Portafolio Web</title>
@@ -31,7 +37,7 @@
             <a href="#contact" class="list-item-link">Contact</a>
           </li>
         </ul>
-        <!-- * menu hamburguesa -->
+        <!-- * hamburguer -->
         <div class="container-btn-burguer">
           <i class="fa-solid fa-burger"></i>
         </div>
@@ -39,7 +45,7 @@
       <section class="container-section-header">
         <div class="container-header-info">
           <h1 class="header-info-title">Hello, my name is <span class="tag-name"><span class="color-blue">&#60;</span> Carlos Sánchez <span class="color-blue">&#47;&#62;</span></span></h1>
-          <span class="color-blue" style="font-weight: bold;">Web Developer</span>
+          <span class="color-blue" style="font-weight: bold;">Web Developer Jr</span>
           <div class="container-networks" style="margin-top: 15px;">
             <ul class="container-networks-list">
               <li class="network-list-item">
@@ -61,11 +67,11 @@
           </div>
         </div>    
         <div class="container-header-img">
-          <img class="header-img" src="./assets/developer_blue.svg" alt="">
+          <img class="header-img" src="./assets/developer_blue.svg" alt="developer blue icon" />
         </div>
       </section> 
       <div class="container-emoji">
-        <span class="emoji">👇</span>
+        <a href="#about" class="emoji">👇</a>
       </div>   
     </div>
   </header>
@@ -80,34 +86,34 @@
           <p class="about-info-description">Passionate about technology and <span class="color-blue">design</span>, my goal is to turn ideas into reality by creating <span class="color-blue">websites</span> that stand out and make a significant <span class="color-blue">impact</span> on every user. Visual aesthetics and usability are the foundation of my projects.</p>
         </div>        
         <div class="container-about-skills">
-          <div class="container-about-skill">
-            <img src="https://cdn-icons-png.flaticon.com/128/732/732212.png" alt="Image HTML" width="32px" class="image-language">
+          <div class="container-about-skill" data-id="0">
+            <img src="https://cdn-icons-png.flaticon.com/128/732/732212.png" alt="Image HTML" width="32px" loading="lazy">
             <!-- <i class="fa-brands fa-html5 fa-2xl"></i> -->
             <strong class="about-skill-name">HTML</strong>
           </div>
-          <div class="container-about-skill">
+          <div class="container-about-skill" data-id="1">
             <!-- <i class="fa-brands fa-css3-alt fa-2xl"></i> -->
-            <img src="https://cdn-icons-png.flaticon.com/128/732/732190.png" alt="Image CSS" width="32px" />         
+            <img src="https://cdn-icons-png.flaticon.com/128/732/732190.png" alt="Image CSS" width="32px" loading="lazy"/>         
             <strong class="about-skill-name">CSS</strong>
           </div>
-          <div class="container-about-skill">
+          <div class="container-about-skill" data-id="2">
             <!-- <i class="fa-brands fa-square-js fa-2xl"></i> -->
-            <img src="https://cdn-icons-png.flaticon.com/128/5968/5968292.png" alt="Image JS" width="32px" />
+            <img src="https://cdn-icons-png.flaticon.com/128/5968/5968292.png" alt="Image JS" width="32px" loading="lazy"/>
             <strong class="about-skill-name">JavaScript</strong>
           </div>
-          <div class="container-about-skill">            
+          <div class="container-about-skill" data-id="3">            
             <!-- <i class="fa-brands fa-node-js fa-2xl"></i> -->
-            <img src="https://cdn-icons-png.flaticon.com/128/5968/5968322.png" alt="Image NodeJs" width="32px" />
+            <img src="https://cdn-icons-png.flaticon.com/128/5968/5968322.png" alt="Image NodeJs" width="32px" loading="lazy"/>
             <strong class="about-skill-name">NodeJs</strong>
           </div>
-          <div class="container-about-skill">
+          <div class="container-about-skill" data-id="4">
             <!-- <i class="fa-brands fa-bootstrap fa-2xl"></i> -->
-            <img src="https://icons.getbootstrap.com/assets/img/favicons/favicon-32x32.png" alt="Image Bootstrap" width="32px" />            
+            <img src="https://icons.getbootstrap.com/assets/img/favicons/favicon-32x32.png" alt="Image Bootstrap" width="32px" loading="lazy"/>            
             <strong class="about-skill-name">Bootstrap</strong>
           </div>
-          <div class="container-about-skill">
+          <div class="container-about-skill" data-id="5">
             <!-- <i class="fa-brands fa-git-alt fa-2xl"></i> -->
-            <img src="https://git-scm.com/favicon.ico" alt="Image Git" width="32px" />            
+            <img src="https://git-scm.com/favicon.ico" alt="Image Git" width="32px" loading="lazy"/>            
             <strong class="about-skill-name">Git</strong>
           </div>
         </div>
@@ -163,15 +169,15 @@
           <form class="form-contact" id="form">
             <div class="field">
               <label for="from_name">Name :</label>
-              <input type="text" name="from_name" id="from_name" autocomplete="off">
+              <input type="text" name="from_name" id="from_name" autocomplete="off" required>
             </div>
             <div class="field">
               <label for="email_id">Email :</label>
-              <input type="text" name="email_id" id="email_id" autocomplete="off">
+              <input type="text" name="email_id" id="email_id" autocomplete="off" required>
             </div>            
             <div class="field">
               <label for="message">Message :</label>
-              <input type="text" name="message" id="message" autocomplete="off">
+              <input type="text" name="message" id="message" autocomplete="off" required>
             </div>
             <input type="submit" id="button" value="Send" class="btn-send">
           </form>
