@@ -1,6 +1,6 @@
 import { sending } from './form-email.js'
-
-//  emailjs.init('4ePsQngIxu8xLVte7')
+// email
+emailjs.init('4ePsQngIxu8xLVte7')
 
 document.addEventListener('click', ( e ) => {
   const btnBurguer = document.querySelector('.container-btn-burguer') 
